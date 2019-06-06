@@ -1,0 +1,11 @@
+Features Used: 
+Creation of custom classes using composition and a design pattern
+•	Encapsulation
+•	Multiple constructors
+•	Getter and Setter Methods
+•	Custom toString to report state of object
+•	Decorator Design Pattern
+•	Builder Design Pattern
+•	Conditional statements, Loops
+•	Helper methods to simplify problem
+•	Polymorphism 
