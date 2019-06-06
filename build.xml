@@ -1,0 +1,34 @@
+
+<project name="Pizza" default="help" basedir=".">
+
+<property name="build-directory" value="build"/>
+<property name="source-directory" value="src"/>
+
+   <path id="class-path">
+      <pathelement location="${build-directory}"/>
+   </path>
+
+   <target name="prepare">
+      <delete dir="${build-directory}"/>
+      <mkdir dir="${build-directory}"/>
+   </target>
+   
+   <target name="build" depends="prepare">
+      <javac srcdir="${source-directory}" destdir="${build-directory}" includeantruntime="false">
+         <classpath refid="class-path"/>
+      </javac>
+   </target>
+
+   <target name="run-command-line" depends="build">
+      <java fork="true" failonerror="yes" classname="pizza.PizzaDriver">
+         <classpath refid="class-path"/>
+      </java>
+   </target>
+
+   <target name="run-gui" depends="build">
+      <java fork="true" failonerror="yes" classname="pizza.PizzaGUI">
+         <classpath refid="class-path"/>
+      </java>
+   </target>
+
+</project>

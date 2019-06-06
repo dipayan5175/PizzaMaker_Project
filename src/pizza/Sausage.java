@@ -1,0 +1,29 @@
+package pizza;
+
+public class Sausage extends DecoratedPizza
+{
+	private double cost;
+	private String image;
+
+	public Sausage(DecoratedPizza current_decoratedPizza)
+	{
+		super(current_decoratedPizza);
+		this.cost = 0.99;
+		this.image = "S";
+	}
+
+	public double getCost()
+	{
+		return this.cost + super.getCost();
+	}
+
+	public String toString()
+	{
+		return super.toString() + "Sausage" + "\r\n";
+	}
+	
+	public String getImage()
+	{
+		return super.getImage() + this.image;	
+	}
+};
